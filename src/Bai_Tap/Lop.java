@@ -1,21 +1,15 @@
-package Bo_Tuc;
+package Bai_Tap;
 
-import java.io.Serializable;
-
-public class Product implements Serializable {
-    private static final long serialVersionUID = 2906642554793891381L;
-
+public class Lop {
     private int id;
     private String name;
-    private int price;
 
-    public Product() {
+    public Lop() {
     }
 
-    public Product(int id, String name, int price) {
+    public Lop(int id, String name) {
         this.id = id;
         this.name = name;
-        this.price = price;
     }
 
     public int getId() {
@@ -34,20 +28,11 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
-        return "Product{" +
+        return "Lop{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
                 '}';
     }
 }

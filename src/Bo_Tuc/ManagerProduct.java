@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ManagerProduct {
-    ArrayList<Product> products = IOProduct.read();
+    ArrayList<Product> products = IOProduct_NhiPhan.read();
     Scanner scanner = new Scanner(System.in);
 
     public void show() {
@@ -13,7 +13,7 @@ public class ManagerProduct {
         }
     }
 
-    public void them() {
+    public void them(){
         System.out.println("Nhập id sản phẩm");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập name sản phẩm");
@@ -22,7 +22,7 @@ public class ManagerProduct {
         int price = Integer.parseInt(scanner.nextLine());
         Product newProduct = new Product(id, name, price);
         products.add(newProduct);
-        IOProduct.write(products);
+        IOProduct_NhiPhan.write(products);
     }
 
     public void xoa() {
